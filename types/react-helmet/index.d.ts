@@ -23,7 +23,7 @@ interface HelmetProps {
     titleTemplate?: string;
 }
 
-export class Helmet extends React.Component<HelmetProps> {
+export class Helmet extends React.Component<HelmetProps, any> {
     static peek(): HelmetData;
     static rewind(): HelmetData;
     static renderStatic(): HelmetData;
@@ -45,7 +45,7 @@ export interface HelmetData {
 
 export interface HelmetDatum {
     toString(): string;
-    toComponent(): React.Component<any>;
+    toComponent(): React.Component<any, any>;
 }
 
 export interface HelmetHTMLBodyDatum {
